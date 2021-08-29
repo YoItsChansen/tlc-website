@@ -1,0 +1,343 @@
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 0.5fr;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.main {
+    background: linear-gradient(270deg, #ff8800, #ffab00, #ff7e00, #ff0000, #ff7300, #ff9900);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: Bg 0s ease infinite;
+    -moz-animation: Bg 0s ease infinite;
+    animation: Bg 0s ease infinite;
+}
+
+@-webkit-keyframes Bg {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes Bg {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes Bg {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.lowerhalf{
+    background-color: white;
+    height: 100%;
+    border-top: 2px solid cornflowerblue;
+    width: 100%;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content{
+    width: 80%;
+    height: 115vh;
+    background-color: white;
+
+    position: absolute;
+    top: 35%;
+    left: 10%;
+
+    border:3px solid transparent;
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1r;
+    grid-template-areas: 
+    "picture picture picture"
+    "picture picture picture"
+    "about contact event";
+
+    row-gap: 10px;
+    column-gap: 10px;
+
+    z-index: 999;
+}
+
+.boxshadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mainpicture{
+    grid-area: picture;
+    border-radius: 20px;
+    background-image: linear-gradient(to top, rgba(0, 110, 255, 0.541) 0%,rgba(0, 225, 255, 0.541) 100%);
+    overflow-y: hidden;
+
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "announcements na na";
+}
+
+.jumpingkid{
+    z-index: 1001;
+    position: absolute;
+    width: 30%;
+    top: 80%;
+    left: 52%;
+}
+
+.jumpingkid:hover{
+    top: 74%;
+    transition: 0.3s ease;
+}
+
+.jumpingkid:not(:hover){
+    top: 80%;
+    transition: 0.3s ease;
+}
+
+img.ground{
+    width: 100%;
+    height: 20%;
+
+    position: absolute;
+    top: 0%;
+    border-radius: 20px;
+}
+
+.mainabout{
+    background-color: rgb(0, 255, 42);
+    border-radius: 20px;
+    background-image: url(./assets/img/homebackground.jpg);
+    background-size: cover;
+}
+
+.maincontact{
+    background-color: rgb(255, 166, 0);
+    border-radius: 20px;
+    background-image: url(./assets/img/contactbackground.jpg);
+    background-size: cover;
+}
+
+.mainevent{
+    background-color: rgb(0, 102, 255);
+    border-radius: 20px;
+    background-image: url("https://images.unsplash.com/photo-1600880291319-1a7499c191e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80");
+    background-size: cover;
+    background-position-y: 20%;
+}
+
+.school{
+    z-index: 1000;
+    width: 35%;
+    position: absolute;
+    left: 49%;
+    bottom: -12%;
+}
+
+.sun{
+    z-index:999;
+    width: 40%;
+    position: relative;
+    bottom: 0%;
+    right: -260%;
+    animation-name: slide;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.orangespace{
+    width: 60%;
+    display: grid;
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.wholescreen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+
+    grid-template-areas: "art na na na na na na na na art2";
+}
+
+.wave {
+    position: relative;
+    height: 70px;
+    width: 600px;
+    background: #e0efe3;
+  }
+.wave:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 340px;
+    height: 80px;
+    background-color: white;
+    right: -5px;
+    top: 40px;
+}
+.wave:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 300px;
+    height: 70px;
+    background-color: #e0efe3;
+    left: 0;
+    top: 27px;
+}
+
+h1.name{
+    color: white;
+    font-family: cursive;
+    text-shadow: 2px 2px 3px black;
+    position: relative;
+    font-size: 10vh;
+    text-align: center;
+    right: 5%;
+    width: max-content;
+}
+
+@keyframes slide {
+    0%{
+        right: -260%;
+    }
+    50%{
+        right: -0%;
+    }
+    100%{
+        right: -260%;
+    }
+}
+
+.footer{
+    width: 100%;
+    height: 80px;
+    background-color: blanchedalmond;
+    position: absolute;
+    bottom: -12%;
+}
+
+.afterhover{
+    filter: grayscale(0%);
+}
+
+.afterhover:hover {
+    filter: grayscale(0%);
+    transition: 0.3s;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .content{
+        height: 50vh;
+        top: 50%;
+    }
+
+    .school{
+        bottom: 16%;
+    }
+
+    .jumpingkid{
+        top: 70%;
+    }
+
+    .jumpingkid:hover, .jumpingkid:active{
+        top: 78%;
+        transition: 0.3s ease;
+    }
+
+    .jumpingkid:not(:hover), .jumpingkid:not(:active){
+        top: 70%;
+        transition: 0.3s ease;
+    }
+
+    .sun{
+        bottom: -420%;
+    }
+
+    .lowerhalf{
+        height: 30%;
+    }
+
+    #playandlearn{
+        display: none;
+    }
+
+    .navbar__item{
+        width: 80px;
+        margin:0;
+    }
+    .navbar__links{
+        margin-left: 0;
+    }
+
+    h1.name{
+        position: absolute;
+        font-size: 50px;
+        width:max-content;
+        height: max-content;
+    }
+
+  }
+  
+  span.animated{
+
+  	font: 700 4em/1 "Oswald", sans-serif;
+  	letter-spacing: 0;
+  	padding: .25em 0 .325em;
+	  display: block;
+	  margin: 0 auto;
+  	text-shadow: 2px 2px 5px rgba(255,255,255,.5);
+      position: relative;
+      right: 5%;
+
+/* Clip Background Image */
+
+	  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+
+/* Animate Background Image */
+
+	  -webkit-text-fill-color: transparent;
+	  -webkit-animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+
+	  -webkit-transform: translate3d(0,0,0);
+	  -webkit-backface-visibility: hidden;
+
+  }
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+
+

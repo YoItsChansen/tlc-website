@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans',sans-serif;
+    scroll-behavior: smooth;
+}
+
+#nav__bar{
+    background: rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(0, 102, 255);
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    position: sticky;
+    font-size: 1.2rem;
+    z-index: 99999;
+}
+
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.navbar__logo img{
+    align-items: center;
+    height: 80px;
+    margin-left: -10px;
+    margin-top: 5px;
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.navbar__links{
+    border: 1px solid transparent ;
+    border-radius: 20px;
+    background-color: rgb(255, 0, 0);
+    color:rgb(255, 255, 255);
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    height: 50%;
+}
+
+.navbar__links:hover{
+    background-color: rgb(255, 123, 0);
+    color: white;
+    transition: 0.3s ease;
+    -webkit-transform: scale(1.1) rotateZ(-5deg);
+    -ms-transform: scale(1.1) rotateZ(-5deg);
+    transform: scale(1.1) rotateZ(-5deg);
+}
+
+.navbar__item{
+    width: 125px;
+    height: 80px;
+    display: flex;
+}
+
+div#home img{
+    position: absolute;
+    margin-top: 10px;
+}
+
+#playandlearn{
+    height: 80%;
+    width: 20%;
+    position: absolute;
+    left: 20%;
+}
