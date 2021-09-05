@@ -48,7 +48,7 @@
     border-radius: 20px;
     background-color: rgb(255, 0, 0);
     color:rgb(255, 255, 255);
-    font-family: cursive;
+    font-family: 'Varela Round', sans-serif;             
     display: flex;
     align-items: center;
     justify-content: center;
